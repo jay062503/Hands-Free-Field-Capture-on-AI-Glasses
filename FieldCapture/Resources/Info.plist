@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Required permissions -->
+    <key>NSCameraUsageDescription</key>
+    <string>FieldCapture needs camera access to photograph appliance nameplates and water damage during a claims walkthrough.</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>FieldCapture listens for voice commands so a technician can work hands-free during a walkthrough.</string>
+
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>FieldCapture converts voice commands to text to trigger captures and record notes without touching the phone.</string>
+
+    <!-- Gemini API key — set this in your Xcode scheme's environment or here for local dev.
+         Never commit a real key. Use a secret manager or Xcode environment variable injection.
+         Get a free key at https://aistudio.google.com/app/apikey -->
+    <key>GEMINI_API_KEY</key>
+    <string>$(GEMINI_API_KEY)</string>
+
+    <!-- App transport security — allow HTTPS to Gemini -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>generativelanguage.googleapis.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+</dict>
+</plist>

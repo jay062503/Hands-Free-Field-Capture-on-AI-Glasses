@@ -1,0 +1,33 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata
+DerivedData/
+build/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V500
+.Trashes
+
+# API keys — NEVER commit these
+*.env
+.env.local
+secrets.xcconfig
+
+# Upload queue (device-local captures, not committed)
+FieldCapture/UploadQueue/
+
+# CocoaPods (not used, but ignored if someone adds it)
+Pods/
+Podfile.lock

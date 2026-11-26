@@ -1,0 +1,195 @@
+{
+  "jobId": "JOB-C8E4F201",
+  "sessionId": "PHONE-9A1B3C7D",
+  "technicianId": null,
+  "startedAt": "2026-11-23T14:02:11Z",
+  "completedAt": "2026-11-23T14:19:33Z",
+  "status": "uploaded",
+  "captures": [
+    {
+      "id": "cap-101-dmg",
+      "captureType": "damage",
+      "timestamp": "2026-11-23T14:03:40Z",
+      "imageLocalPath": "/FieldCapture/UploadQueue/cap-101-dmg.jpg",
+      "imageRemoteURL": "https://api.cozmo.ai/captures/cap-101-dmg",
+      "qualityCheck": {
+        "passed": true,
+        "blurScore": 220.1,
+        "brightnessScore": 110.3,
+        "framingScore": 0.61,
+        "failureReasons": [],
+        "thresholdsUsed": {
+          "minBlurScore": 80.0,
+          "minBrightness": 40.0,
+          "minFraming": 0.15
+        }
+      },
+      "extraction": {
+        "type": "damage",
+        "payload": {
+          "room": {"value": "bathroom", "confidence": 0.95, "source": "voice_command"},
+          "surface": {"value": "ceiling", "confidence": 0.91, "source": "vision_api"},
+          "damageType": {"value": "mold growth, circular pattern consistent with roof leak", "confidence": 0.88, "source": "vision_api"},
+          "roughSizeM2": {"value": "0.3", "confidence": 0.41, "source": "vision_api"},
+          "severityLevel": {"value": "high", "confidence": 0.84, "source": "vision_api"},
+          "overallConfidence": 0.82
+        }
+      },
+      "uploadStatus": "uploaded"
+    },
+    {
+      "id": "cap-102-dmg",
+      "captureType": "damage",
+      "timestamp": "2026-11-23T14:08:22Z",
+      "imageLocalPath": "/FieldCapture/UploadQueue/cap-102-dmg.jpg",
+      "imageRemoteURL": "https://api.cozmo.ai/captures/cap-102-dmg",
+      "qualityCheck": {
+        "passed": false,
+        "blurScore": 95.2,
+        "brightnessScore": 29.4,
+        "framingScore": 0.33,
+        "failureReasons": [
+          "Too dark (brightness 29.4, need ≥40.0). Move to better light or use the torch."
+        ],
+        "thresholdsUsed": {
+          "minBlurScore": 80.0,
+          "minBrightness": 40.0,
+          "minFraming": 0.15
+        }
+      },
+      "extraction": {
+        "type": "damage",
+        "payload": {
+          "room": {"value": "bathroom", "confidence": 0.95, "source": "voice_command"},
+          "surface": {"value": "floor", "confidence": 0.90, "source": "voice_command"},
+          "damageType": {"value": null, "confidence": 0.12, "source": "vision_api"},
+          "roughSizeM2": {"value": null, "confidence": 0.0, "source": "vision_api"},
+          "severityLevel": {"value": null, "confidence": 0.0, "source": "vision_api"},
+          "overallConfidence": 0.12
+        }
+      },
+      "uploadStatus": "uploaded"
+    },
+    {
+      "id": "cap-103-dmg",
+      "captureType": "damage",
+      "timestamp": "2026-11-23T14:09:01Z",
+      "imageLocalPath": "/FieldCapture/UploadQueue/cap-103-dmg.jpg",
+      "imageRemoteURL": "https://api.cozmo.ai/captures/cap-103-dmg",
+      "qualityCheck": {
+        "passed": true,
+        "blurScore": 198.3,
+        "brightnessScore": 76.8,
+        "framingScore": 0.49,
+        "failureReasons": [],
+        "thresholdsUsed": {
+          "minBlurScore": 80.0,
+          "minBrightness": 40.0,
+          "minFraming": 0.15
+        }
+      },
+      "extraction": {
+        "type": "damage",
+        "payload": {
+          "room": {"value": "bathroom", "confidence": 0.95, "source": "voice_command"},
+          "surface": {"value": "floor", "confidence": 0.90, "source": "voice_command"},
+          "damageType": {"value": "tile grout failure, standing water visible", "confidence": 0.86, "source": "vision_api"},
+          "roughSizeM2": {"value": "1.2", "confidence": 0.47, "source": "vision_api"},
+          "severityLevel": {"value": "high", "confidence": 0.81, "source": "vision_api"},
+          "overallConfidence": 0.81
+        }
+      },
+      "uploadStatus": "uploaded"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-101",
+      "timestamp": "2026-11-23T14:14:50Z",
+      "rawVoiceText": "note: smell of mildew from under the vanity, check for hidden moisture",
+      "extraction": {
+        "rawText": "note: smell of mildew from under the vanity, check for hidden moisture",
+        "location": {"value": "under the vanity", "confidence": 0.78, "source": "keyword_match"},
+        "subject": {"value": "smell of mildew from under the vanity, check for hidden moisture", "confidence": 0.9, "source": "voice_command"},
+        "urgency": {"value": "normal", "confidence": 0.9, "source": "keyword_match"},
+        "overallConfidence": 0.85
+      }
+    }
+  ],
+  "lineItems": [
+    {
+      "id": "li-101",
+      "code": "MOLD-TREAT-SF",
+      "description": "Mold remediation treatment",
+      "unit": "sq_ft",
+      "estimatedQuantity": 3.2,
+      "confidence": 0.82,
+      "sourceCaptures": ["cap-101-dmg"]
+    },
+    {
+      "id": "li-102",
+      "code": "DRY-RR-SF",
+      "description": "Remove and replace drywall",
+      "unit": "sq_ft",
+      "estimatedQuantity": 3.2,
+      "confidence": 0.75,
+      "sourceCaptures": ["cap-101-dmg"]
+    },
+    {
+      "id": "li-103",
+      "code": "FLR-TIL-SF",
+      "description": "Remove and replace ceramic/porcelain tile",
+      "unit": "sq_ft",
+      "estimatedQuantity": 12.9,
+      "confidence": 0.81,
+      "sourceCaptures": ["cap-103-dmg"]
+    },
+    {
+      "id": "li-104",
+      "code": "FLR-SUB-SF",
+      "description": "Remove and replace subfloor (3/4\" OSB)",
+      "unit": "sq_ft",
+      "estimatedQuantity": 12.9,
+      "confidence": 0.70,
+      "sourceCaptures": ["cap-103-dmg"]
+    },
+    {
+      "id": "li-105",
+      "code": "EQUIP-DH-EA",
+      "description": "Dehumidifier placement (commercial)",
+      "unit": "each",
+      "estimatedQuantity": 1.0,
+      "confidence": 0.80,
+      "sourceCaptures": ["cap-103-dmg"]
+    },
+    {
+      "id": "li-106",
+      "code": "TRIM-BASEBOARD-LF",
+      "description": "Remove and replace baseboard trim",
+      "unit": "linear_ft",
+      "estimatedQuantity": null,
+      "confidence": 0.60,
+      "sourceCaptures": []
+    }
+  ],
+  "metadata": {
+    "appVersion": "1.0.0",
+    "sdkVersion": "DAT-1.0-Mock",
+    "deviceMode": "phone_camera",
+    "connectivityEvents": [
+      {
+        "timestamp": "2026-11-23T14:06:30Z",
+        "eventType": "lost",
+        "queuedItemsAtEvent": 1
+      },
+      {
+        "timestamp": "2026-11-23T14:07:12Z",
+        "eventType": "restored",
+        "queuedItemsAtEvent": 2
+      }
+    ],
+    "totalCaptures": 3,
+    "failedQualityChecks": 1,
+    "retakeRequests": 1
+  }
+}
